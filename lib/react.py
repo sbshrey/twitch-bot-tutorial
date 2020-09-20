@@ -24,7 +24,11 @@ def process(bot, user, message):
 	check_activity(bot, user)
 
 	if (match := search(r'cheer[0-9]+', message)) is not None:
-		thank_for_cheer(bot, user, match)
+		try:
+			thank_for_cheer(bot, user, match)
+		except Exception as e:
+			print("thank_for_cheer error", str(e))
+
 
 	if (h := games.heist) is not None:
 		if h.start_time <= time() and not h.running:

@@ -27,8 +27,8 @@ from requests import get
 
 from lib import db, cmds, react, automod
 
-NAME = "your bot's name here"
-OWNER = "your channel's name here"
+NAME = "sbshrey_bot"
+OWNER = "sbshrey"
 
 
 class Bot(SingleServerIRCBot):
@@ -36,8 +36,8 @@ class Bot(SingleServerIRCBot):
 		self.HOST = "irc.chat.twitch.tv"
 		self.PORT = 6667
 		self.USERNAME = NAME.lower()
-		self.CLIENT_ID = "your bot's Client ID here"
-		self.TOKEN = "your bot's token here"
+		self.CLIENT_ID = "3229h30inx92nbrtx6r2ie15j3gf9x"
+		self.TOKEN = "m8ghuk3ijvcftbtdkzkatxsbn4o1ku"
 		self.CHANNEL = f"#{OWNER}"
 
 		url = f"https://api.twitch.tv/kraken/users?login={self.USERNAME}"
